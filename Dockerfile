@@ -5,7 +5,8 @@ RUN apk add --update --no-cache \
     git \
     python \
     py-pip \
-  && pip install pygments
+  && pip install pygments \
+  && rm -rf /var/cache/apk/*
 
 ENV HUGO_VERSION 0.40.2
 ENV HUGO_BINARY hugo
